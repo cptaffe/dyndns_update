@@ -4,7 +4,7 @@ FROM debian
 # install appropriate packages
 RUN apt-get update && apt-get install -y \
  python3 \
- pip3
+ python3-pip
 
 # install requirements
 COPY requirements.txt /tmp/
