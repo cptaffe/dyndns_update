@@ -9,4 +9,6 @@ RUN apt-get update && apt-get install -y \
 # install requirements
 RUN pip3 install requests
 
-CMD ./dyndns_update.py
+COPY dyndns_update.py /usr/bin/dyndnsupdate
+
+ENTRYPOINT /usr/bin/dyndnsupdate
