@@ -7,8 +7,6 @@ RUN apt-get update && apt-get install -y \
  python3-pip
 
 # install requirements
-COPY requirements.txt /tmp/
-RUN pip3 install /tmp/requirements.txt
-COPY . /tmp/
+RUN pip3 install requests
 
 CMD ./dyndns_update.py
